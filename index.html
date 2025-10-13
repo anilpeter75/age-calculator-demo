@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Age Calculator Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #333;
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+        }
+
+        .backlink {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9em;
+            transition: background 0.3s;
+        }
+
+        .backlink:hover {
+            background: #45a049;
+        }
+
+        .input-section {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        .output {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .output p {
+            color: #666;
+            margin: 0;
+        }
+
+        .age-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .stat {
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .stat-label {
+            font-size: 0.8em;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-value {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.85em;
+            color: #777;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quick Age Calculator</h1>
+            <a href="https://myagecalc.com/" target="_blank" class="backlink">🚀 Calculate Precisely → MyAgeCalc.com</a>
+        </header>
+        
+        <div class="input-section">
+            <label for="birthdate">Enter your birthdate:</label>
+            <input type="date" id="birthdate" max="today">
+        </div>
+        
+        <div class="output" id="output">
+            <p>Enter a date above to see your age!</p>
+        </div>
+        
+        <footer>
+            <p>Powered by <a href="https://myagecalc.com/" target="_blank">MyAgeCalc.com</a> – Free & Private Age Tools</p>
+        </footer>
+    </div>
+
+    <script>
+        const birthdateInput = document.getElementById('birthdate');
+        const output = document.getElementById('output');
+
+        birthdateInput.addEventListener('change', calculateAge);
+
+        function calculateAge() {
+            const birthdate = new Date(birthdateInput.value);
+            if (isNaN(birthdate.getTime())) {
+                output.innerHTML = '<p>Enter a valid past date!</p>';
+                return;
+            }
+
+            const now = new Date();
+            const diffMs = now - birthdate;
+            const diffSeconds = Math.floor(diffMs / 1000);
+            const diffMinutes = Math.floor(diffSeconds / 60);
+            const diffHours = Math.floor(diffMinutes / 60);
+            const diffDays = Math.floor(diffHours / 24);
+            const diffWeeks = Math.floor(diffDays / 7);
+            const diffMonths = Math.floor(diffDays / 30.436875); // Average month length
+            const diffYears = now.getFullYear() - birthdate.getFullYear();
+            const birthdayPassed = (now.getMonth() > birthdate.getMonth() || 
+                                    (now.getMonth() === birthdate.getMonth() && now.getDate() >= birthdate.getDate()));
+            const years = birthdayPassed ? diffYears : diffYears - 1;
+
+            // Next birthday days
+            const nextBirthday = new Date(now.getFullYear(), birthdate.getMonth(), birthdate.getDate());
+            if (!birthdayPassed) nextBirthday.setFullYear(now.getFullYear());
+            else nextBirthday.setFullYear(now.getFullYear() + 1);
+            const daysToBirthday = Math.floor((nextBirthday - now) / (1000 * 60 * 60 * 24));
+
+            output.innerHTML = `
+                <div class="age-breakdown">
+                    <div class="stat"><span class="stat-label">Years</span><span class="stat-value">${years}</span></div>
+                    <div class="stat"><span class="stat-label">Months</span><span class="stat-value">${diffMonths}</span></div>
+                    <div class="stat"><span class="stat-label">Days</span><span class="stat-value">${diffDays}</span></div>
+                    <div class="stat"><span class="stat-label">Hours</span><span class="stat-value">${diffHours}</span></div>
+                    <div class="stat"><span class="stat-label">Minutes</span><span class="stat-value">${diffMinutes}</span></div>
+                </div>
+                <p style="font-size: 0.9em; color: #888; margin-top: 15px;">Days to next birthday: ${daysToBirthday}</p>
+            `;
+        }
+
+        // Set max date to today
+        birthdateInput.max = new Date().toISOString().split('T')[0];
+    </script>
+</body>
+</html>
