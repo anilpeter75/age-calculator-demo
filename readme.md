@@ -2,7 +2,7 @@
 
 A simple, interactive **age calculator** built with vanilla HTML, CSS, and JavaScript. Pick your birthdate to instantly see your exact age in years, months, days, hours, minutes—even days until your next birthday! Great for fun facts or quick milestones.
 
-[![Demo](https://img.shields.io/badge/Live%20Demo-View%20Online-blue?style=for-the-badge&logo=github)](https://yourusername.github.io/age-calculator-demo/)  
+[![Demo](https://img.shields.io/badge/Live%20Demo-View%20Online-blue?style=for-the-badge&logo=github)](https://anilpeter75.github.io/age-calculator-demo/)  
 [![Full Tool](https://img.shields.io/badge/Advanced%20Tools-MyAgeCalc-green?style=for-the-badge&logo=calculator)](https://myagecalc.com/)
 
 ## Features
@@ -20,7 +20,7 @@ For birthdate Jan 1, 1990 (as of Oct 2025):
 - **Days to Next Bday**: ~79
 
 ## Live Demo
-Try it [here](https://yourusername.github.io/age-calculator-demo/) (replace with your GitHub Pages URL after setup).
+Try it [here](https://anilpeter75.github.io/age-calculator-demo/).
 
 ## Quick Setup
 1. Fork this repo.
