@@ -27,7 +27,7 @@ Try it [here](https://anilpeter75.github.io/age-calculator-demo/).
 4. Deploy your version!
 
 ## Try the Full Suite
-This is a mini-demo—visit [MyAgeCalc.com](https://myagecalc.com/) for pro features like zodiac insights, life expectancy, or age in dog years. Free, private, no ads! ⭐
+This is a mini-demo—visit [My Age Calc](https://myagecalc.com/) for pro features like zodiac insights, life expectancy, or age in dog years. Free, private, no ads! ⭐
 
 ## Tech Stack
 - **HTML5** for structure
@@ -43,5 +43,5 @@ MIT – Free to use, modify, and share.
 
 ---
 
-**Built with ❤️ for curious minds. Questions? [Contact via MyAgeCalc](https://myagecalc.com/).**  
-*Last updated: October 2025*
+**Built with ❤️ for curious minds. Questions? [Contact via MyAgeCalc](https://myagecalc.com/contact).**  
+*Last updated: May 2026*
