@@ -1,47 +1,64 @@
-# Age Calculator Demo 🚀
+# MyAgeCalc – Free Online Age Calculator
 
-A simple, interactive **age calculator** built with vanilla HTML, CSS, and JavaScript. Pick your birthdate to instantly see your exact age in years, months, days, hours, minutes—even days until your next birthday! Great for fun facts or quick milestones.
+🌐 **Live Demo:** https://myagecalc.com/
 
+MyAgeCalc is a fast, free, and privacy-friendly online age calculator that helps you calculate your exact age in years, months, weeks, days, hours, minutes, and seconds. Simply enter your date of birth and get instant, accurate results.
 
-## Features
-- **Real-time Breakdown**: Updates on date change—no buttons required.
-- **Precise Math**: Accounts for leap years, exact diffs, and next birthday countdown.
-- **Mobile-Friendly**: Responsive design for any screen.
-- **Privacy-First**: Client-side only; nothing stored or shared.
-- **Fun Extras**: Shows granular stats for that "wow" factor.
+## 🚀 Live Demo
 
-### Example
-For birthdate Jan 1, 1990 (as of Oct 2025):
-- **Years**: 35
-- **Months**: ~423
-- **Days**: ~12,900
-- **Days to Next Bday**: ~79
+👉 https://myagecalc.com/
 
-## Live Demo
-Try it [here](https://anilpeter75.github.io/age-calculator-demo/).
+Try the calculator online without registration or downloads.
 
-## Quick Setup
-1. Fork this repo.
-2. Enable GitHub Pages in Settings > Pages (source: main branch).
-3. Tweak dates or add zodiac signs in `index.html`.
-4. Deploy your version!
+## ✨ Features
 
-## Try the Full Suite
-This is a mini-demo—visit [My Age Calc](https://myagecalc.com/) for pro features like zodiac insights, life expectancy, or age in dog years. Free, private, no ads! ⭐
+- ✅ Calculate exact age instantly
+- ✅ Years, months, weeks, days, hours, minutes & seconds
+- ✅ Accurate leap year calculations
+- ✅ Mobile-friendly and responsive design
+- ✅ Fast and lightweight
+- ✅ No signup required
+- ✅ 100% browser-based for better privacy
+- ✅ Works on Chrome, Edge, Firefox, Safari, and mobile browsers
 
-## Tech Stack
-- **HTML5** for structure
-- **CSS3** for styling (gradients, grids, responsive)
-- **Vanilla JS** for date math (no libraries)
+## 🎯 Use Cases
 
-## Contributing
-- Fork & PR ideas (e.g., add weeks or seconds).
-- Issues? Open one—suggestions appreciated!
+- Calculate your current age
+- Check age for official forms
+- Find age difference between dates
+- Birthday countdown
+- School and college applications
+- HR and employee verification
+- Medical and insurance forms
+- Fun facts like total days or seconds lived
 
-## License
-MIT – Free to use, modify, and share.
+## 📸 Demo
+
+Visit the live website:
+
+**https://myagecalc.com/**
+
+## 🔍 SEO Keywords
+
+Age Calculator, Online Age Calculator, Free Age Calculator, Exact Age Calculator, Calculate Age, Date of Birth Calculator, DOB Calculator, Age in Years Months Days, Birthday Calculator, Chronological Age Calculator, Age Difference Calculator.
+
+## 🌟 Why MyAgeCalc?
+
+Unlike many online calculators, MyAgeCalc focuses on speed, accuracy, and simplicity. All calculations are performed instantly, making it ideal for students, professionals, HR teams, and anyone needing precise age calculations.
+
+## 🌐 Website
+
+https://myagecalc.com/
+
+## 📱 Browser Extension
+
+Chrome Extension:
+https://chromewebstore.google.com/detail/myagecalc-instant-age-cal/feohfnalgahbfgcjfbjjmhgiacinkpbc
+
+## 📄 License
+
+MIT License
 
 ---
 
-**Built with ❤️ for curious minds. Questions? [Contact via MyAgeCalc](https://myagecalc.com/contact).**  
-*Last updated: May 2026*
+Made with ❤️ to provide a simple, accurate, and free age calculator for everyone.
